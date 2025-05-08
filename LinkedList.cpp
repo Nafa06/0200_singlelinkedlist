@@ -18,7 +18,7 @@ public:
     {
         START = NULL;
     }
-    void addNode() 
+    void addNode()
     {
         int nim;
         cout << "\nMasukkan Nomor Mahasiswa: ";
@@ -54,8 +54,8 @@ public:
         nodeBaru->next = current;
         previous->next = nodeBaru;
     }
-    
-    bool listEmpty() 
+
+    bool listEmpty()
     {
         return (START == NULL);
     }
@@ -73,7 +73,7 @@ public:
 
         return (*current != NULL);
     }
-    bool delNode(int nim) 
+    bool delNode(int nim)
     {
         Node *current, *previous;
         if (!Search(nim, &previous, &current))
@@ -113,7 +113,7 @@ int main()
     SingleLinkedList mhs;
     int nim;
     char ch;
-    while (1) 
+    while (1)
     {
         cout << endl
              << "Menu";
@@ -128,7 +128,11 @@ int main()
         cin >> ch;
     }
     switch (ch)
-        {
-        }
-        
+    {
+    case '1':
+    {
+        mhs.addNode();
+    }
+    break;
+    }
 }
